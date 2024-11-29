@@ -1,14 +1,4 @@
 """
-Reddit Comment Analyzer with Full Documentation
-This script analyzes Reddit comments for Gen Z slang usage.
-It connects to Reddit's API, processes comments, and outputs statistics.
-
-Key Features:
-- Analyzes comments from a specified subreddit
-- Counts Gen Z slang word usage
-- Calculates a 'Gen Z Score' based on slang density
-- Saves results to a CSV file
-
 Required libraries:
 - praw: Reddit API wrapper
 - pandas: Data handling and CSV creation
@@ -26,13 +16,6 @@ from collections import Counter  # Specialized dictionary for counting
 
 class RedditCommentAnalyzer:
     def __init__(self):
-        """
-        Class constructor: Initializes the analyzer with slang words and Reddit connection.
-        This method runs automatically when creating a new RedditCommentAnalyzer object.
-        Similar to a constructor in Java/C++.
-        """
-        # Define list of Gen Z slang terms to look for
-        # Using a list for easy modification and maintenance
         self.keywords = [
             'rizz', 'gyatt', 'fr', 'fr fr', 'frfr', 'no cap', 'cap', 'bussin', 'bussin bussin',
             'slay', 'slayed', 'slaying', 'based', 'mid', 'valid', 'invalid', 'taking Ls',
@@ -81,7 +64,6 @@ class RedditCommentAnalyzer:
         config = configparser.ConfigParser()
 
         try:
-            # Attempt to read credentials from config file
             config.read('reddit_config.ini')
 
             # Create and return Reddit instance using credentials
@@ -108,7 +90,7 @@ class RedditCommentAnalyzer:
 
         Formula: (total_keywords / total_words) * 1000, capped at 100
         """
-        # Avoid division by zero
+
         if total_words == 0:
             return 0
 
@@ -127,9 +109,6 @@ class RedditCommentAnalyzer:
 
         Returns:
         - Dictionary with slang words as keys and their counts as values
-
-        Example:
-        "bruh bruh that's based" -> {'bruh': 2, 'based': 1}
         """
         # Convert comment to lowercase for case-insensitive matching
         text = comment_text.lower()
@@ -267,7 +246,7 @@ class RedditCommentAnalyzer:
 
 def main():
     """
-    Main function - program starts here.
+    Main function - program starts
     Gets user input and runs the analysis.
     """
     # Create analyzer object
@@ -278,16 +257,14 @@ def main():
 
     # Get number of comments to analyze, with error handling
     try:
-        # The 'or 1000' means use 1000 if no input given
         comment_limit = int(input("Enter number of comments to analyze: ") or 1000)
     except ValueError:
-        # If input isn't a valid number, use default
         comment_limit = 1000
 
     # Run the analysis
     analyzer.analyze_subreddit_comments(subreddit_name, comment_limit)
 
 
-# This checks if the script is being run directly (not imported)
+# Checks if the script is being run directly (not imported)
 if __name__ == "__main__":
     main()
