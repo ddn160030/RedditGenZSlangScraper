@@ -35,7 +35,7 @@ class RedditCommentAnalyzer:
         # Using a list for easy modification and maintenance
         self.keywords = [
             'rizz', 'gyatt', 'fr', 'fr fr', 'frfr', 'no cap', 'cap', 'bussin', 'bussin bussin',
-            'slay', 'slayed', 'slaying', 'based', 'mid', 'valid', 'invalid', 'L', 'W', 'taking Ls',
+            'slay', 'slayed', 'slaying', 'based', 'mid', 'valid', 'invalid', 'taking Ls',
             'taking Ws', 'common L', 'common W', 'rare L', 'rare W', 'massive L', 'massive W',
             'huge L', 'huge W', 'bruh', 'bruhhh', 'skull', '💀', 'crying', 'im dead', "i'm dead",
             'ded', 'wheeze', 'screaming', 'down bad', 'down horrendous', 'touch grass',
