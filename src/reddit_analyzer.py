@@ -106,15 +106,15 @@ class RedditCommentAnalyzer:
         Returns:
         - Integer score between 0 and 100
 
-        Formula: (total_keywords / total_words) * 1000, capped at 100
-        This means 10% slang would score 100, 5% would score 50, etc.
+        Formula: (total_keywords / total_words) * 200, capped at 100
+        This means 50% slang would score 100, 5% would score 10, etc.
         """
         # Avoid division by zero
         if total_words == 0:
             return 0
 
         # Calculate density score
-        density = (total_keywords / total_words) * 1000
+        density = (total_keywords / total_words) * 200
 
         # Cap score at 100 and round to nearest integer
         return min(100, round(density))
