@@ -40,7 +40,8 @@ class RedditCommentAnalyzer:
             'afaik', 'goat', 'rn', 'mf', 'fs', 'w rizz', 'big w', 'major l', 'huge l', 'tfw',
             'mfw', 'me when', 'mood', 'based and redpilled', 'cope', 'drip', 'clean', 'fire',
             'gas', 'slaps', 'caught lacking', 'on god', 'fr on god', 'no printer just fax',
-            'sadge', 'poggers', 'thicc', 'kinda', 'cringe', 'woke', 'toxic', 'main character energy'
+            'sadge', 'poggers', 'thicc', 'kinda', 'cringe', 'woke', 'toxic', 'main character energy',
+                'oomf', 'sneaky link', 'bop', 'wig', 'manifesting'
         ]
 
         # Initialize Reddit API connection using our credentials
