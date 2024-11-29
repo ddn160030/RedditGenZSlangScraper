@@ -41,7 +41,8 @@ class RedditCommentAnalyzer:
             'mfw', 'me when', 'mood', 'based and redpilled', 'cope', 'drip', 'clean', 'fire',
             'gas', 'slaps', 'caught lacking', 'on god', 'fr on god', 'no printer just fax',
             'sadge', 'poggers', 'thicc', 'kinda', 'cringe', 'woke', 'toxic', 'main character energy',
-                'oomf', 'sneaky link', 'bop', 'wig', 'manifesting'
+                'oomf', 'sneaky link', 'bop', 'wig', 'manifesting', 'vibe', 'girlboss', 'unhoused',
+                'cringe'
         ]
 
         # Initialize Reddit API connection using our credentials
